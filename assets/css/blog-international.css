@@ -1,0 +1,397 @@
+/* ===================================================
+   بلاگ بین‌المللی - International Blog
+   طراحی مدرن و خلاقانه با استانداردهای جهانی
+   =================================================== */
+
+/* Base Styles */
+.international-blog {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .international-blog::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(circle at 90% 10%, rgba(120, 119, 198, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 10% 90%, rgba(255, 119, 198, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  
+  /* Articles Grid */
+  .articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+  }
+  
+  @media (max-width: 768px) {
+    .articles-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+  }
+  
+  /* Article Card Link */
+  .article-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .article-card-link:hover {
+    transform: translateY(-5px);
+  }
+  
+  .article-card-link:hover .article-card {
+    box-shadow: 
+      0 25px 50px rgba(0, 0, 0, 0.15),
+      0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Article Card */
+  .article-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 
+      0 10px 30px rgba(0, 0, 0, 0.08),
+      0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .article-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+    z-index: 2;
+  }
+  
+  /* Article Image */
+  .article-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+  }
+  
+  .article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .article-card-link:hover .article-image img {
+    transform: scale(1.1);
+  }
+  
+  .article-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.7) 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .article-category {
+    background: rgba(255, 255, 255, 0.9);
+    color: #667eea;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+  }
+  
+  .article-read-time {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    font-size: 0.85rem;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 6px 12px;
+    border-radius: 15px;
+  }
+  
+  .article-read-time i {
+    font-size: 0.8rem;
+  }
+  
+  /* Article Content */
+  .article-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .article-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .article-date,
+  .article-views {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .article-date i,
+  .article-views i {
+    font-size: 0.9rem;
+    color: #667eea;
+  }
+  
+  .article-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+  }
+  
+  .article-card-link:hover .article-title {
+    color: #667eea;
+  }
+  
+  .article-excerpt {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    flex: 1;
+    font-size: 0.95rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Article Author */
+  .article-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+  }
+  
+  .author-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(102, 126, 234, 0.1);
+  }
+  
+  .author-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .author-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .author-name {
+    font-weight: 600;
+    color: #333;
+    font-size: 0.95rem;
+  }
+  
+  .author-role {
+    font-size: 0.8rem;
+    color: #667eea;
+  }
+  
+  /* Article Actions */
+  .article-actions {
+    padding: 20px 25px;
+    border-top: 1px solid rgba(102, 126, 234, 0.1);
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  }
+  
+  .read-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #667eea;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+  }
+  
+  .article-card-link:hover .read-more {
+    gap: 12px;
+    color: #764ba2;
+  }
+  
+  /* Blog Actions */
+  .blog-actions {
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  .btn-view-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+  }
+  
+  .btn-view-all:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+    color: white;
+    gap: 15px;
+  }
+  
+  /* Animation for Cards */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .article-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+  }
+  
+  .article-card:nth-child(1) { animation-delay: 0.1s; }
+  .article-card:nth-child(2) { animation-delay: 0.2s; }
+  .article-card:nth-child(3) { animation-delay: 0.3s; }
+  .article-card:nth-child(4) { animation-delay: 0.4s; }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .international-blog {
+      padding: 70px 0;
+    }
+    
+    .articles-grid {
+      gap: 25px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .article-content {
+      padding: 20px;
+    }
+    
+    .article-actions {
+      padding: 15px 20px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .article-image {
+      height: 180px;
+    }
+    
+    .article-title {
+      font-size: 1.15rem;
+    }
+    
+    .article-excerpt {
+      -webkit-line-clamp: 2;
+    }
+    
+    .btn-view-all {
+      padding: 12px 25px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    .international-blog {
+      background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+    }
+    
+    .article-card {
+      background: #1e1e1e;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .article-title {
+      color: #fff;
+    }
+    
+    .article-excerpt {
+      color: #aaa;
+    }
+    
+    .article-meta {
+      color: #888;
+    }
+    
+    .author-name {
+      color: #fff;
+    }
+    
+    .article-actions {
+      background: linear-gradient(135deg, #252525 0%, #1e1e1e 100%);
+      border-top-color: rgba(102, 126, 234, 0.2);
+    }
+  }
+  
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    .article-card,
+    .article-card-link,
+    .article-image img,
+    .read-more,
+    .btn-view-all {
+      animation: none;
+      transition: none;
+    }
+    
+    .article-card-link:hover {
+      transform: none;
+    }
+  }

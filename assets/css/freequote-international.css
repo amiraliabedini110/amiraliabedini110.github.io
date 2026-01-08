@@ -1,0 +1,496 @@
+/* ===================================================
+   بخش پیشنهاد ویژه رایگان - International Free Quote
+   طراحی مدرن و جذاب با استانداردهای جهانی
+   =================================================== */
+
+/* Base Styles */
+.international-free-quote {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0a1931 0%, #1a3a5f 100%);
+    position: relative;
+    overflow: hidden;
+    color: white;
+  }
+  
+  .international-free-quote::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  
+  /* Quote Header */
+  .quote-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+  }
+  
+  .quote-subtitle {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4ecdc4;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .quote-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #4ecdc4, transparent);
+  }
+  
+  .quote-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #4ecdc4 0%, #45b7d1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .quote-title .highlight {
+    color: white;
+    -webkit-text-fill-color: white;
+  }
+  
+  .quote-description {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+  
+  .quote-description .highlight-text {
+    color: #4ecdc4;
+    font-weight: 600;
+  }
+  
+  /* Quote Form Container */
+  .quote-form-container {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Modern Quote Form */
+  .modern-quote-form {
+    width: 100%;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+  }
+  
+  .form-group {
+    position: relative;
+  }
+  
+  .form-group.full-width {
+    grid-column: 1 / -1;
+  }
+  
+  .form-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: white;
+    font-size: 0.95rem;
+  }
+  
+  .form-group label i {
+    color: #4ecdc4;
+    font-size: 1.1rem;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: white;
+    font-family: 'Vazir', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #4ecdc4;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 4px rgba(78, 205, 196, 0.2);
+  }
+  
+  .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+  }
+  
+  .form-control option {
+    background: #1a3a5f;
+    color: white;
+  }
+  
+  select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%234ecdc4' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: left 20px center;
+    padding-left: 45px;
+  }
+  
+  textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  .form-hint {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  /* Form Footer */
+  .form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .form-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+  }
+  
+  .feature-item i {
+    color: #4ecdc4;
+    font-size: 1rem;
+  }
+  
+  /* Submit Button */
+  .submit-button {
+    background: linear-gradient(135deg, #4ecdc4 0%, #45b7d1 100%);
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-family: 'Vazir', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
+  }
+  
+  .submit-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(78, 205, 196, 0.4);
+  }
+  
+  .submit-button:active {
+    transform: translateY(-2px);
+  }
+  
+  .submit-button .button-loading {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #4ecdc4 0%, #45b7d1 100%);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .submit-button.loading .button-text,
+  .submit-button.loading i {
+    opacity: 0;
+  }
+  
+  .submit-button.loading .button-loading {
+    display: flex;
+  }
+  
+  .submit-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #45b7d1 0%, #4ecdc4 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+  
+  .submit-button:hover::before {
+    opacity: 1;
+  }
+  
+  .submit-button span,
+  .submit-button i {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Form Privacy */
+  .form-privacy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .form-privacy i {
+    color: #4ecdc4;
+  }
+  
+  /* Quote Stats */
+  .quote-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .stat-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+    border-color: rgba(78, 205, 196, 0.3);
+  }
+  
+  .stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(78, 205, 196, 0.1) 0%, rgba(69, 183, 209, 0.1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4ecdc4;
+    font-size: 1.5rem;
+  }
+  
+  .stat-content {
+    flex: 1;
+  }
+  
+  .stat-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+  
+  .stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .quote-form-container,
+  .quote-stats {
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 992px) {
+    .international-free-quote {
+      padding: 80px 0;
+    }
+    
+    .quote-title {
+      font-size: 2.2rem;
+    }
+    
+    .quote-form-container {
+      padding: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .international-free-quote {
+      padding: 60px 0;
+    }
+    
+    .quote-title {
+      font-size: 1.8rem;
+    }
+    
+    .quote-description {
+      font-size: 1rem;
+      padding: 0 20px;
+    }
+    
+    .quote-form-container {
+      padding: 25px;
+      margin: 0 15px 40px;
+    }
+    
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .form-footer {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .form-features {
+      order: 2;
+    }
+    
+    .submit-button {
+      order: 1;
+      justify-content: center;
+    }
+    
+    .quote-stats {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .international-free-quote {
+      padding: 50px 0;
+    }
+    
+    .quote-title {
+      font-size: 1.6rem;
+    }
+    
+    .quote-form-container {
+      padding: 20px;
+    }
+    
+    .submit-button {
+      padding: 15px 30px;
+      font-size: 1rem;
+    }
+    
+    .stat-item {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+  }
+  
+  /* Dark Mode Support */
+  @media (prefers-color-scheme: dark) {
+    .international-free-quote {
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    }
+    
+    .form-control {
+      background: rgba(255, 255, 255, 0.05);
+    }
+  }
+  
+  /* High Contrast Mode */
+  @media (prefers-contrast: high) {
+    .international-free-quote {
+      background: #000;
+      border-top: 3px solid #4ecdc4;
+    }
+    
+    .form-control {
+      border: 2px solid #4ecdc4;
+    }
+  }
+  
+  /* Reduced Motion */
+  @media (prefers-reduced-motion: reduce) {
+    .international-free-quote,
+    .quote-form-container,
+    .quote-stats,
+    .stat-item,
+    .submit-button {
+      animation: none;
+      transition: none;
+    }
+    
+    .submit-button:hover {
+      transform: none;
+    }
+  }
