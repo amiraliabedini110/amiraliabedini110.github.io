@@ -1,0 +1,15 @@
+# robots.txt برای https://amiraliabedini110.github.io
+User-agent: *
+# اجازهٔ ایندکس همهٔ صفحات عمومی
+Allow: /
+
+# منابع غیر لازم برای ایندکس (اختیاری؛ اگر نمی‌خواهید موتورهای جستجو فایل‌های بزرگ CSS/JS/images را کرال کنند)
+# توجه: حذف این موارد باعث می‌شود موتورهای جستجو برخی منابع را نخوانند که گاهی روی رندر صفحه تاثیر می‌گذارد.
+Disallow: /assets/vendor/
+Disallow: /vendor/
+# اگر مسیر مدیریتی واقعی دارید، آن را مسدود کنید (مثال)
+Disallow: /admin/
+Disallow: /admin-panel/
+
+# لینک به نقشه سایت (باید آدرس کامل باشد)
+Sitemap: https://amiraliabedini110.github.io/sitemap.xml

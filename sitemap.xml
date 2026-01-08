@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- آدرس پایه (از تگ canonical در فایل شما گرفته شد) -->
+  <url>
+    <loc>https://amiraliabedini110.github.io/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <!-- صفحات مهم -->
+  <url>
+    <loc>https://amiraliabedini110.github.io/index.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://amiraliabedini110.github.io/blog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- مقالات (از لینک‌های صفحه استخراج شد). اگر نسخه‌ی canonical / تاریخ به‌روزرسانی دارید، مقدار lastmod را اضافه کنید -->
+  <url>
+    <loc>https://amiraliabedini110.github.io/article-details.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://amiraliabedini110.github.io/article-video.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://amiraliabedini110.github.io/article-ads-budget.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://amiraliabedini110.github.io/article-ux-mistakes.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- صفحات پروژه -->
+  <url>
+    <loc>https://amiraliabedini110.github.io/project-restaurant.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://amiraliabedini110.github.io/project-fintech.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <!-- اگر صفحات دیگری دارید (مثلاً صفحه contact.html یا صفحات دسته‌بندی)، اینجا اضافه کنید -->
+</urlset>
