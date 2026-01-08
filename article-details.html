@@ -1,0 +1,3314 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="مقاله کامل و تخصصی در مورد سئو و بهینه‌سازی سایت توسط امیرعلی عابدینی - راهکارهای عملی و حرفه‌ای برای رشد کسب‌وکار آنلاین">
+    <meta name="theme-color" content="#4da6e7">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="titel-logo.png" type="image/png">
+    <title>سئو در سال ۱۴۰۵: تغییرات و راهکارهای پیشرفته | امیرعلی عابدینی</title>
+    
+    <!-- لینک‌های CSS -->
+    <link rel="stylesheet" href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-digimedia-v3.css">
+    <link rel="stylesheet" href="assets/css/animated.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    
+    
+    <style>
+        /* === RESET & BASE === */
+        :root {
+            --primary-color: #4da6e7;
+            --secondary-color: #ff6b35;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #eaeaea;
+            --safe-top: env(safe-area-inset-top);
+            --safe-bottom: env(safe-area-inset-bottom);
+            --safe-left: env(safe-area-inset-left);
+            --safe-right: env(safe-area-inset-right);
+            --mobile-breakpoint: 768px;
+            --tablet-breakpoint: 1024px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            overflow-x: hidden;
+        }
+        
+        body {
+            font-family: Vazir, 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+            position: relative;
+            background: #fff;
+        }
+        
+        /* === PRELOADER === */
+        #js-preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 999999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* === PRE-HEADER RESPONSIVE === */
+        .pre-header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            z-index: 1001;
+            padding-top: max(10px, var(--safe-top));
+        }
+        
+        .pre-header .container {
+            padding: 0 15px;
+        }
+        
+        .pre-header .row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 -7.5px;
+        }
+        
+        .pre-header .col-lg-8,
+        .pre-header .col-sm-8,
+        .pre-header .col-7,
+        .pre-header .col-lg-4,
+        .pre-header .col-sm-4,
+        .pre-header .col-5 {
+            padding: 0 7.5px;
+            width: 100%;
+        }
+        
+        .contact-info-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+        
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            flex: 1 1 auto;
+            min-width: 140px;
+            max-width: 100%;
+            min-height: 44px;
+        }
+        
+        .contact-info-item:active {
+            transform: scale(0.98);
+            background: rgba(77, 166, 231, 0.1);
+        }
+        
+        .contact-info-icon {
+            margin-left: 8px;
+            color: var(--primary-color);
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        
+        .contact-info-text {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .contact-info-label {
+            font-size: 10px;
+            color: #666;
+            margin-bottom: 2px;
+            font-weight: 500;
+        }
+        
+        .contact-info-value {
+            font-size: 12px;
+            font-weight: 600;
+            color: #333;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            direction: ltr;
+            text-align: left;
+        }
+        
+        .admin-login-btn {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            min-height: 44px;
+            min-width: 100px;
+        }
+        
+        .admin-login-btn:active {
+            transform: scale(0.98);
+            background: #e55a2b;
+        }
+        
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            list-style: none;
+            margin: 10px 0 0;
+            padding: 0;
+        }
+        
+        .social-media li {
+            display: inline-block;
+        }
+        
+        .social-media a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #f5f5f5;
+            color: #666;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .social-media a:active {
+            transform: scale(0.95);
+        }
+        
+        /* === HEADER RESPONSIVE === */
+        .header-area {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            padding: 10px 0;
+            transition: all 0.3s;
+        }
+        
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+        }
+        
+        .logo img {
+            max-height: 35px;
+            width: auto;
+            object-fit: contain;
+        }
+        
+        /* Mobile Menu Trigger */
+        .menu-trigger {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 44px;
+            height: 44px;
+            cursor: pointer;
+            position: relative;
+            z-index: 1002;
+            background: none;
+            border: none;
+            padding: 0;
+        }
+        
+        .menu-trigger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--primary-color);
+            margin: 3px 0;
+            transition: 0.3s;
+            position: relative;
+        }
+        
+        .menu-trigger.active span:nth-child(1) {
+            transform: rotate(45deg);
+            top: 7px;
+        }
+        
+        .menu-trigger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .menu-trigger.active span:nth-child(3) {
+            transform: rotate(-45deg);
+            top: -7px;
+        }
+        
+        /* Desktop Navigation */
+        .nav {
+            display: none;
+            list-style: none;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        /* Mobile Navigation Overlay */
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 320px;
+            height: 100vh;
+            background: white;
+            box-shadow: -5px 0 30px rgba(0,0,0,0.15);
+            z-index: 1000;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 80px 20px 30px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .mobile-menu.active {
+            right: 0;
+        }
+        
+        .mobile-nav {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .mobile-nav li {
+            margin-bottom: 8px;
+        }
+        
+        .mobile-nav li a {
+            display: block;
+            padding: 14px 18px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 12px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .mobile-nav li a:active {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(0.98);
+        }
+        
+        .mobile-nav li a.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .border-first-button {
+            margin-top: 20px;
+        }
+        
+        .border-first-button a {
+            display: block;
+            padding: 14px 25px;
+            border: 2px solid var(--primary-color);
+            border-radius: 25px;
+            color: var(--primary-color);
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .border-first-button a:active {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(0.98);
+        }
+        
+        /* === ARTICLE HERO RESPONSIVE === */
+        .article-hero {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 0 40px;
+            margin-bottom: 40px;
+            border-bottom: 3px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .article-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            width: 100%;
+        }
+        
+        .back-to-blog {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: rgba(77, 166, 231, 0.1);
+            transition: all 0.3s;
+        }
+        
+        .back-to-blog:active {
+            transform: translateX(-5px);
+            background: rgba(77, 166, 231, 0.2);
+        }
+        
+        .article-title {
+            font-size: 1.75rem;
+            line-height: 1.4;
+            color: var(--text-color);
+            margin-bottom: 20px;
+            font-weight: 800;
+            word-wrap: break-word;
+            hyphens: auto;
+            text-align: right;
+        }
+        
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 25px;
+            align-items: center;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #666;
+            font-size: 13px;
+            background: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .meta-item i {
+            color: var(--primary-color);
+            font-size: 14px;
+        }
+        
+        .article-author {
+            background: var(--primary-color);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        
+        .article-featured-image {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            margin: 25px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: block;
+            max-height: 400px;
+            object-fit: cover;
+        }
+        
+        /* === ARTICLE CONTENT RESPONSIVE === */
+        .article-content {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #444;
+            text-align: justify;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        
+        .article-section {
+            margin-bottom: 30px;
+            padding: 25px 20px;
+            background: white;
+            border-radius: 16px;
+            border-right: 4px solid var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.35rem;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px dashed #eee;
+            font-weight: 700;
+        }
+        
+        .article-section p {
+            margin-bottom: 20px;
+        }
+        
+        .article-section ul,
+        .article-section ol {
+            padding-right: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .article-section li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        .highlight-box {
+            background: var(--light-bg);
+            border-right: 4px solid var(--secondary-color);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 12px;
+            position: relative;
+        }
+        
+        .highlight-box h4 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .key-term {
+            color: var(--secondary-color);
+            font-weight: 700;
+            background: #fff5f2;
+            padding: 2px 8px;
+            border-radius: 6px;
+            display: inline-block;
+            margin: 0 2px;
+        }
+        
+        .important-note {
+            color: #2e7d32;
+            font-weight: 600;
+            background: #f1f8e9;
+            padding: 2px 8px;
+            border-radius: 6px;
+            display: inline-block;
+            margin: 0 2px;
+        }
+        
+        .warning-note {
+            color: #d32f2f;
+            font-weight: 600;
+            background: #ffebee;
+            padding: 2px 8px;
+            border-radius: 6px;
+            display: inline-block;
+            margin: 0 2px;
+        }
+        
+        /* === ARTICLE TAGS RESPONSIVE === */
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 30px 0;
+        }
+        
+        .tag {
+            background: #e3f2fd;
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 25px;
+            font-size: 13px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            font-weight: 500;
+        }
+        
+        .tag:active {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(0.95);
+        }
+        
+        /* === RATING SYSTEM RESPONSIVE === */
+        .rating-section {
+            text-align: center;
+        }
+        
+        .rating-container {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        
+        .rating-stars {
+            margin-bottom: 20px;
+        }
+        
+        .stars {
+            font-size: 36px;
+            color: #ddd;
+            margin-bottom: 10px;
+            display: inline-flex;
+            gap: 5px;
+        }
+        
+        .stars span {
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .stars span:active {
+            transform: scale(0.9);
+        }
+        
+        .stars span.active {
+            color: #ffd700;
+        }
+        
+        .rating-text {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .rating-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: var(--light-bg);
+            border-radius: 12px;
+        }
+        
+        .rating-avg,
+        .rating-count {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+        
+        .rating-avg i {
+            color: #ffd700;
+            font-size: 18px;
+        }
+        
+        .rating-count i {
+            color: var(--primary-color);
+            font-size: 18px;
+        }
+        
+        .submit-rating {
+            display: block;
+            margin: 0 auto;
+            padding: 12px 40px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-height: 48px;
+            min-width: 140px;
+        }
+        
+        .submit-rating:active:not(:disabled) {
+            transform: scale(0.98);
+            background: #3a8bc8;
+        }
+        
+        .submit-rating:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* === COMMENTS SYSTEM RESPONSIVE === */
+        .comments-form {
+            background: var(--light-bg);
+            padding: 25px 20px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .comments-form h4 {
+            margin-bottom: 20px;
+            color: var(--text-color);
+            font-size: 1.25rem;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 15px;
+            background: white;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(77, 166, 231, 0.1);
+        }
+        
+        .submit-comment {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 25px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s;
+            min-height: 48px;
+            min-width: 160px;
+        }
+        
+        .submit-comment:active {
+            transform: scale(0.98);
+            background: #3a8bc8;
+        }
+        
+        .comments-list {
+            margin-bottom: 25px;
+        }
+        
+        .comment-item {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .comment-header {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .comment-author {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .author-info {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .author-info strong {
+            display: block;
+            font-size: 15px;
+            margin-bottom: 4px;
+            color: var(--text-color);
+        }
+        
+        .comment-date {
+            font-size: 12px;
+            color: #888;
+        }
+        
+        .comment-actions {
+            display: flex;
+            gap: 10px;
+            align-self: stretch;
+        }
+        
+        .reply-btn {
+            background: none;
+            border: 1px solid #ddd;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            transition: all 0.3s;
+            min-height: 36px;
+        }
+        
+        .reply-btn:active {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: scale(0.98);
+        }
+        
+        .comment-body {
+            margin-bottom: 15px;
+        }
+        
+        .comment-body p {
+            margin: 0;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+        
+        .comment-reply {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 12px;
+            border-right: 3px solid var(--primary-color);
+            margin-top: 15px;
+        }
+        
+        .reply-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .reply-header strong {
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+        
+        .reply-date {
+            font-size: 12px;
+            color: #888;
+        }
+        
+        .admin-reply {
+            margin-top: 15px;
+        }
+        
+        .comments-pagination {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .load-more {
+            background: none;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 48px;
+            min-width: 200px;
+        }
+        
+        .load-more:active {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(0.98);
+        }
+        
+        /* === ARTICLE NAVIGATION RESPONSIVE === */
+        .article-navigation {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 20px;
+            background: white;
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            min-height: 70px;
+        }
+        
+        .nav-btn:active {
+            border-color: var(--primary-color);
+            transform: scale(0.99);
+        }
+        
+        .nav-btn span {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 1;
+        }
+        
+        .nav-btn span small {
+            font-size: 13px;
+            color: #666;
+            margin-top: 4px;
+        }
+        
+        .nav-btn i {
+            font-size: 18px;
+            color: var(--primary-color);
+        }
+        
+        /* === FOOTER RESPONSIVE === */
+        footer {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            margin-top: 60px;
+            text-align: center;
+        }
+        
+        footer p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        
+        footer strong {
+            color: var(--primary-color);
+        }
+        
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        /* === CHATBOT RESPONSIVE === */
+        .chatbot-container {
+            position: fixed;
+            bottom: max(20px, var(--safe-bottom));
+            left: max(20px, var(--safe-left));
+            z-index: 999;
+        }
+        
+        .chatbot-toggle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            border: none;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(77, 166, 231, 0.3);
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1001;
+            min-width: 60px;
+            min-height: 60px;
+        }
+        
+        .chatbot-toggle:active {
+            transform: scale(0.95);
+            box-shadow: 0 3px 15px rgba(77, 166, 231, 0.4);
+        }
+        
+        .chatbot-notification {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: var(--secondary-color);
+            color: white;
+            font-size: 12px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .theme-toggle-btn {
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #333;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s;
+            z-index: 1000;
+            min-width: 50px;
+            min-height: 50px;
+        }
+        
+        .theme-toggle-btn:active {
+            transform: scale(0.95);
+        }
+        
+        .chatbot-window {
+            position: fixed;
+            bottom: 90px;
+            left: 20px;
+            right: 20px;
+            width: calc(100vw - 40px);
+            max-width: 400px;
+            height: 70vh;
+            max-height: 600px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 1002;
+        }
+        
+        .chatbot-window.active {
+            display: flex;
+            animation: slideUp 0.3s ease;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .chatbot-header {
+            padding: 20px;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        
+        .chatbot-header h4 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .chatbot-close:active {
+            opacity: 1;
+            transform: scale(0.9);
+        }
+        
+        .chatbot-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        .chat-message {
+            display: flex;
+            gap: 12px;
+            max-width: 90%;
+        }
+        
+        .bot-message {
+            align-self: flex-start;
+        }
+        
+        .user-message {
+            align-self: flex-end;
+            flex-direction: row-reverse;
+        }
+        
+        .message-avatar {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 16px;
+        }
+        
+        .user-message .message-avatar {
+            background: var(--secondary-color);
+        }
+        
+        .message-content {
+            background: #f5f5f5;
+            padding: 12px 16px;
+            border-radius: 18px;
+            max-width: calc(100% - 50px);
+        }
+        
+        .user-message .message-content {
+            background: var(--primary-color);
+            color: white;
+            border-radius: 18px 18px 0 18px;
+        }
+        
+        .message-content p {
+            margin: 0 0 5px 0;
+            font-size: 14px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+        
+        .message-time {
+            font-size: 11px;
+            color: #999;
+            display: block;
+            text-align: left;
+        }
+        
+        .user-message .message-time {
+            color: rgba(255,255,255,0.8);
+            text-align: right;
+        }
+        
+        .chatbot-input-area {
+            padding: 15px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+            flex-shrink: 0;
+        }
+        
+        #chatbotInput {
+            flex: 1;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            padding: 12px 18px;
+            font-family: inherit;
+            resize: none;
+            max-height: 120px;
+            min-height: 48px;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        
+        #chatbotInput:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(77, 166, 231, 0.1);
+        }
+        
+        #chatbotSend {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        #chatbotSend:active {
+            background: #3a8bc8;
+            transform: scale(0.95);
+        }
+        
+        /* === ADMIN PANEL RESPONSIVE === */
+        .admin-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 9999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            padding-top: max(20px, var(--safe-top));
+            padding-bottom: max(20px, var(--safe-bottom));
+        }
+        
+        .admin-panel.active {
+            display: flex;
+        }
+        
+        .admin-panel-content {
+            background: white;
+            width: 100%;
+            max-width: 1000px;
+            height: 90vh;
+            max-height: 800px;
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .admin-panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--border-color);
+            flex-shrink: 0;
+        }
+        
+        .admin-panel-header h3 {
+            font-size: 1.3rem;
+            color: var(--text-color);
+        }
+        
+        #closeAdminPanel {
+            background: #f44336;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            min-height: 40px;
+        }
+        
+        #closeAdminPanel:active {
+            transform: scale(0.98);
+            background: #d32f2f;
+        }
+        
+        .admin-tabs {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            flex-wrap: wrap;
+            flex-shrink: 0;
+        }
+        
+        .admin-tab {
+            padding: 12px 20px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+            font-size: 14px;
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            min-height: 48px;
+        }
+        
+        .admin-tab:active {
+            transform: scale(0.98);
+        }
+        
+        .admin-tab.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+        }
+        
+        .admin-tab-content {
+            flex: 1;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            padding-right: 5px;
+        }
+        
+        .admin-section {
+            display: none;
+        }
+        
+        .admin-section.active {
+            display: block;
+        }
+        
+        .comments-management {
+            display: grid;
+            gap: 15px;
+        }
+        
+        .comment-manage-item {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+        }
+        
+        .comment-manage-header {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .comment-actions-admin {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .btn-approve,
+        .btn-reject,
+        .btn-reply {
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            border: none;
+            min-height: 36px;
+            min-width: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        
+        .btn-approve {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .btn-reject {
+            background: #f44336;
+            color: white;
+        }
+        
+        .btn-reply {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-approve:active,
+        .btn-reject:active,
+        .btn-reply:active {
+            transform: scale(0.95);
+        }
+        
+        .reply-form {
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .reply-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-family: inherit;
+            font-size: 14px;
+            min-height: 100px;
+        }
+        
+        /* === DARK THEME RESPONSIVE === */
+        body.dark-theme {
+            --text-color: #f0f0f0;
+            --light-bg: #1a1a1a;
+            --border-color: #444;
+            background: #121212;
+            color: #f0f0f0;
+        }
+        
+        body.dark-theme .pre-header,
+        body.dark-theme .header-area {
+            background: rgba(30, 30, 30, 0.98);
+            border-bottom-color: #444;
+        }
+        
+        body.dark-theme .contact-info-item {
+            background: #2a2a2a;
+            border-color: #444;
+        }
+        
+        body.dark-theme .contact-info-value {
+            color: #f0f0f0;
+        }
+        
+        body.dark-theme .mobile-menu {
+            background: #1e1e1e;
+        }
+        
+        body.dark-theme .mobile-nav li a {
+            color: #f0f0f0;
+        }
+        
+        body.dark-theme .article-hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+        }
+        
+        body.dark-theme .article-section {
+            background: #1e1e1e;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        body.dark-theme .article-content {
+            color: #e0e0e0;
+        }
+        
+        body.dark-theme .highlight-box {
+            background: #252525;
+        }
+        
+        body.dark-theme .comments-form {
+            background: #252525;
+        }
+        
+        body.dark-theme .comment-item {
+            background: #1e1e1e;
+            border-color: #444;
+        }
+        
+        body.dark-theme .chatbot-window {
+            background: #1e1e1e;
+            color: #f0f0f0;
+        }
+        
+        body.dark-theme .message-content {
+            background: #2a2a2a;
+            color: #f0f0f0;
+        }
+        
+        body.dark-theme #chatbotInput {
+            background: #2a2a2a;
+            border-color: #444;
+            color: #f0f0f0;
+        }
+        
+        body.dark-theme .admin-panel-content {
+            background: #1e1e1e;
+            color: #f0f0f0;
+        }
+        
+        body.dark-theme .comment-manage-item {
+            background: #2a2a2a;
+            border-color: #444;
+        }
+        
+        body.dark-theme .form-group input,
+        body.dark-theme .form-group textarea {
+            background: #2a2a2a;
+            border-color: #444;
+            color: #f0f0f0;
+        }
+        
+        body.dark-theme .theme-toggle-btn {
+            background: #ffd700;
+            color: #333;
+        }
+        
+        /* === MEDIA QUERIES === */
+        
+        /* Small mobile devices (iPhone SE, Galaxy Fold) */
+        @media (max-width: 360px) {
+            html {
+                font-size: 15px;
+            }
+            
+            .article-title {
+                font-size: 1.5rem;
+            }
+            
+            .article-meta {
+                gap: 10px;
+                font-size: 12px;
+            }
+            
+            .contact-info-item {
+                min-width: 100%;
+            }
+            
+            .chatbot-toggle,
+            .theme-toggle-btn {
+                width: 52px;
+                height: 52px;
+            }
+            
+            .theme-toggle-btn {
+                bottom: 62px;
+            }
+            
+            .chatbot-window {
+                left: 10px;
+                right: 10px;
+                width: calc(100vw - 20px);
+            }
+        }
+        
+        /* Mobile landscape */
+        @media (max-width: 767px) and (orientation: landscape) {
+            .article-hero {
+                padding: 60px 0 30px;
+            }
+            
+            .article-featured-image {
+                max-height: 250px;
+            }
+            
+            .chatbot-window {
+                height: 80vh;
+                max-height: 400px;
+            }
+            
+            .admin-panel-content {
+                height: 85vh;
+                max-height: 500px;
+            }
+        }
+        
+        /* Tablet and larger devices */
+        @media (min-width: 768px) {
+            .pre-header .col-lg-8 {
+                width: 66.666667%;
+            }
+            
+            .pre-header .col-lg-4 {
+                width: 33.333333%;
+            }
+            
+            .pre-header .col-sm-8 {
+                width: 66.666667%;
+            }
+            
+            .pre-header .col-sm-4 {
+                width: 33.333333%;
+            }
+            
+            .social-media {
+                justify-content: flex-end;
+                margin: 0;
+            }
+            
+            .nav {
+                display: flex;
+            }
+            
+            .menu-trigger {
+                display: none;
+            }
+            
+            .mobile-menu,
+            .mobile-menu-overlay {
+                display: none !important;
+            }
+            
+            .article-title {
+                font-size: 2.2rem;
+            }
+            
+            .article-container {
+                max-width: 720px;
+                padding: 0 30px;
+            }
+            
+            .article-section {
+                padding: 30px;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .article-navigation {
+                flex-direction: row;
+            }
+            
+            .nav-btn {
+                flex: 1;
+            }
+            
+            .rating-info {
+                flex-direction: row;
+                justify-content: space-around;
+            }
+            
+            .comment-header {
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .comment-manage-header {
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            .chatbot-window {
+                width: 380px;
+                left: 30px;
+                bottom: 100px;
+            }
+        }
+        
+        /* Desktop */
+        @media (min-width: 992px) {
+            .article-container {
+                max-width: 900px;
+            }
+            
+            .article-title {
+                font-size: 2.5rem;
+            }
+            
+            .article-content {
+                font-size: 1.05rem;
+            }
+            
+            .chatbot-window {
+                width: 400px;
+            }
+        }
+        
+        /* Large desktop */
+        @media (min-width: 1200px) {
+            .article-container {
+                max-width: 1100px;
+            }
+            
+            .pre-header .col-lg-8 {
+                width: 66.666667%;
+            }
+            
+            .pre-header .col-lg-4 {
+                width: 33.333333%;
+            }
+        }
+        
+        /* High DPI screens */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .article-featured-image {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            .pre-header,
+            .header-area,
+            .chatbot-container,
+            .admin-login-btn {
+                display: none !important;
+            }
+            
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            
+            .article-container {
+                max-width: 100%;
+                padding: 0;
+            }
+            
+            .article-hero {
+                padding: 40px 0;
+                background: none !important;
+                border-bottom: 2px solid #000;
+            }
+            
+            .article-section {
+                box-shadow: none !important;
+                border: 1px solid #ddd !important;
+                page-break-inside: avoid;
+            }
+            
+            .highlight-box {
+                border: 1px solid #000 !important;
+                background: none !important;
+            }
+        }
+        
+        /* Accessibility improvements */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* Touch device detection */
+        @media (hover: none) and (pointer: coarse) {
+            .tag:hover,
+            .nav-btn:hover,
+            .contact-info-item:hover {
+                transform: none;
+            }
+            
+            .tag:active,
+            .nav-btn:active,
+            .contact-info-item:active {
+                transform: scale(0.98);
+            }
+        }
+        
+        /* iOS specific fixes */
+        @supports (-webkit-touch-callout: none) {
+            .chatbot-messages,
+            .admin-tab-content,
+            .mobile-menu {
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .article-hero {
+                padding-top: max(80px, var(--safe-top));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="js-preloader" class="js-preloader">
+        <div class="preloader-inner">
+            <span class="dot"></span>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav">
+            <li class="scroll-to-section"><a href="index.html">خانه</a></li>
+            <li class="scroll-to-section"><a href="index.html#about">درباره ما</a></li>
+            <li class="scroll-to-section"><a href="index.html#services">خدمات</a></li>
+            <li class="scroll-to-section"><a href="index.html#portfolio">پروژه‌ها</a></li>
+            <li class="scroll-to-section"><a href="index.html#blog" class="active">بلاگ</a></li>
+            <li class="scroll-to-section"><a href="index.html#contact">تماس</a></li>
+            <li class="scroll-to-section">
+                <div class="border-first-button"><a href="index.html#contact">درخواست مشاوره</a></div>
+            </li>
+        </ul>
+        
+        <!-- Contact info in mobile menu -->
+        <div style="margin-top: auto; padding-top: 25px; border-top: 1px solid var(--border-color);">
+            <div class="contact-info-item" style="margin-bottom: 12px; background: transparent; border: none; padding: 0;">
+                <div class="contact-info-icon">
+                    <i class="fa fa-phone"></i>
+                </div>
+                <div class="contact-info-text">
+                    <span class="contact-info-label">شماره تماس</span>
+                    <span class="contact-info-value phone-number">0930 056 7109</span>
+                </div>
+            </div>
+            <div class="contact-info-item" style="background: transparent; border: none; padding: 0;">
+                <div class="contact-info-icon">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <div class="contact-info-text">
+                    <span class="contact-info-label">ایمیل</span>
+                    <span class="contact-info-value">amiraliabedini103@gmail.com</span>
+                </div>
+            </div>
+            
+            <!-- Social media in mobile menu -->
+            <div style="margin-top: 20px; display: flex; justify-content: center; gap: 15px;">
+                <a href="https://t.me/Arta_amir" target="_blank" rel="noopener" title="تلگرام" style="width: 44px; height: 44px; background: #0088cc; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-weight: bold;">
+                    T
+                </a>
+                <a href="https://eitaa.com/Arta_amir" target="_blank" rel="noopener" title="ایتا" style="width: 44px; height: 44px; background: #00aaff; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-weight: bold;">
+                    E
+                </a>
+                <a href="https://rubika.ir/Arta_amir_88" target="_blank" rel="noopener" title="روبیکا" style="width: 44px; height: 44px; background: #ff4757; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-weight: bold;">
+                    R
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pre-Header -->
+    <div class="pre-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-8 col-7">
+                    <div class="contact-info-container">
+                        <a href="tel:+989300567109" class="contact-info-item" title="تماس با من">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <span class="contact-info-label">شماره تماس</span>
+                                <span class="contact-info-value phone-number">0930 056 7109</span>
+                            </div>
+                        </a>
+                        <a href="mailto:amiraliabedini103@gmail.com" class="contact-info-item" title="ارسال ایمیل">
+                            <div class="contact-info-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="contact-info-text">
+                                <span class="contact-info-label">آدرس ایمیل</span>
+                                <span class="contact-info-value">amiraliabedini103@gmail.com</span>
+                            </div>
+                        </a>
+                        <button class="admin-login-btn" id="adminLoginBtn">
+                            <i class="fa fa-user-secret"></i>
+                            <span class="d-none d-md-inline">ورود مدیر</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-5">
+                    <ul class="social-media">
+                        <li><a href="https://t.me/Arta_amir" target="_blank" rel="noopener" title="تلگرام">
+                            <span class="messenger-icon telegram-icon" aria-label="تلگرام">T</span>
+                        </a></li>
+                        <li><a href="https://eitaa.com/Arta_amir" target="_blank" rel="noopener" title="ایتا">
+                            <span class="messenger-icon eitaa-icon" aria-label="ایتا">E</span>
+                        </a></li>
+                        <li><a href="https://rubika.ir/Arta_amir_88" target="_blank" rel="noopener" title="روبیکا">
+                            <span class="messenger-icon rubika-icon" aria-label="روبیکا">R</span>
+                        </a></li>
+                        <li><a href="https://web.shad.ir/#/user/Arta_amir_88" target="_blank" rel="noopener" title="شاد">
+                            <span class="messenger-icon shad-icon" aria-label="شاد">S</span>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <a href="index.html" class="logo">
+                            <img src="assets/images/logo-v3.png" alt="لوگو - امیرعلی عابدینی" loading="lazy">
+                        </a>
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="index.html">خانه</a></li>
+                            <li class="scroll-to-section"><a href="index.html#about">درباره ما</a></li>
+                            <li class="scroll-to-section"><a href="index.html#services">خدمات</a></li>
+                            <li class="scroll-to-section"><a href="index.html#portfolio">پروژه‌ها</a></li>
+                            <li class="scroll-to-section"><a href="index.html#blog" class="active">بلاگ</a></li>
+                            <li class="scroll-to-section"><a href="index.html#contact">تماس</a></li>
+                            <li class="scroll-to-section">
+                                <div class="border-first-button"><a href="index.html#contact">درخواست مشاوره</a></div>
+                            </li>
+                        </ul>
+                        <button class='menu-trigger' id="mobileMenuTrigger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Article Hero Section -->
+    <div class="article-hero">
+        <div class="article-container">
+            <a href="index.html#blog" class="back-to-blog">
+                <i class="fa fa-arrow-right"></i> بازگشت به مقالات
+            </a>
+            <h1 class="article-title" id="articleTitle">سئو در سال ۱۴۰۵: تغییرات بزرگ و راهکارهای حرفه‌ای برای ماندن در صدر گوگل</h1>
+            
+            <div class="article-meta">
+                <div class="meta-item">
+                    <i class="fa fa-user"></i>
+                    <span class="article-author">امیرعلی عابدینی</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fa fa-calendar"></i>
+                    <span>۳ دی ۱۴۰۴</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fa fa-clock"></i>
+                    <span>۱۲ دقیقه</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fa fa-eye"></i>
+                    <span>۱,۲۴۵ بازدید</span>
+                </div>
+            </div>
+            
+            <img src="seo-logo.png" alt="تصویر مقاله سئو" class="article-featured-image" loading="lazy">
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="article-container">
+        <div class="article-content">
+            <!-- مقدمه -->
+            <div class="article-section">
+                <h2 class="section-title">مقدمه: چرا سئو همچنان پادشاه است؟</h2>
+                <p>سلام دوستان! <strong>امیرعلی عابدینی</strong> هستم، متخصص سئو و دیجیتال مارکتینگ. امروز می‌خواهیم در مورد مهم‌ترین تغییرات سئو در سال ۱۴۰۵ صحبت کنیم. بله درست شنیدید! با وجود تمام شایعات، <span class="key-term">سئو هنوز قدرتمندترین ابزار</span> برای جذب مشتری واقعی است.</p>
+                <p>الان که دارم این مقاله رو می‌نویسم، پروژه‌های مختلفی در دست دارم که ثابت می‌کنه کسب‌وکارهای ایرانی بیشتر از هر زمان دیگه به سئو نیاز دارن. اما یک مشکلی هست: خیلی‌ها فکر می‌کنن سئو مثل سابق کار می‌کنه! اشتباه نکنید دوستان، گوگل داره روز به روز هوشمندتر می‌شه.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>نکته طلایی از امیرعلی عابدینی:</strong> سئو دیگه فقط کلمات کلیدی نیست! الان گوگل به <span class="important-note">تجربه کاربری</span>، <span class="important-note">سرعت سایت</span> و <span class="important-note">اعتبار محتوا</span> بیشتر از هر چیزی اهمیت می‌ده. اگه می‌خوای رتبه‌ت رو حفظ کنی، باید به فکر کاربر باشی نه فقط ربات گوگل!</p>
+                </div>
+            </div>
+
+            <!-- بخش 1 -->
+            <div class="article-section">
+                <h2 class="section-title">۱. انقلاب هوش مصنوعی: دوست یا دشمن سئو؟</h2>
+                <p>حتماً شنیدید که <span class="key-term">هوش مصنوعی</span> داره همه چیز رو تغییر می‌ده. برای سئو هم همینطوره! گوگل با الگوریتم Bard و سیستم‌های جدیدش، محتواهای کپی و بی‌کیفیت رو به راحتی شناسایی می‌کنه.</p>
+                
+                <p>من <strong>امیرعلی عابدینی</strong> در پروژه‌های اخیرم دیدم که سایت‌هایی که با ChatGPT محتوا تولید می‌کنن ولی ویرایش انسانی ندارن، دارن رتبه از دست می‌دن. چرا؟ چون گوگل حالا می‌تونه تشخیص بده محتوا توسط انسان نوشته شده یا ماشین!</p>
+                
+                <p><span class="warning-note">هشدار مهم:</span> استفاده از هوش مصنوعی برای تولید محتوا خوبه، اما حتماً باید توسط یک متخصص مثل <strong>امیرعلی عابدینی</strong> ویرایش و شخصی‌سازی بشه. من خودم در تیمم از ابزارهای AI استفاده می‌کنم، ولی همیشه آخرین مرحله، بازبینی انسانی هست.</p>
+                
+                <ul>
+                    <li><strong>کاربرد مثبت:</strong> برای ایده‌پردازی و ساختار اولیه</li>
+                    <li><strong>کاربرد منفی:</strong> تولید محتوای کامل بدون دخالت انسان</li>
+                    <li><strong>راهکار من:</strong> ترکیب قدرت AI با خلاقیت انسانی</li>
+                </ul>
+            </div>
+
+            <!-- بخش 2 -->
+            <div class="article-section">
+                <h2 class="section-title">۲. تجربه کاربری (UX): سلطان جدید سئو</h2>
+                <p>دوستای عزیز، این رو بدونید که <span class="key-term">تجربه کاربری</span> الان از خود محتوا مهم‌تر شده! گوگل از طریق Core Web Vitals داره سایت‌ها رو بر اساس UX رتبه‌بندی می‌کنه.</p>
+                
+                <p>یادمه یک پروژه داشتم که سایت رتبه ۵ داشت ولی فروش صفر! چرا؟ چون کاربران بعد از ورود گیج می‌شدن و می‌رفتن. با بهبود UX، در عرض ۳ ماه به رتبه ۳ رسیدیم و فروش ۳۰۰ درصدی گرفتیم.</p>
+                
+                <div class="highlight-box">
+                    <h4>۳ فاکتور حیاتی UX برای سئو:</h4>
+                    <ol>
+                        <li><strong>سرعت لود (LCP):</strong> کمتر از ۲.۵ ثانیه</li>
+                        <li><strong>تعامل اولیه (FID):</strong> کمتر از ۱۰۰ میلی‌ثانیه</li>
+                        <li><strong>پایداری بصری (CLS):</strong> کمتر از ۰.۱</li>
+                    </ol>
+                    <p>این اعداد رو جدی بگیرید! در مشاوره‌هایی که <strong>امیرعلی عابدینی</strong> ارائه می‌ده، اولین چیزی که بررسی می‌کنم همینه.</p>
+                </div>
+            </div>
+
+            <!-- بخش 3 -->
+            <div class="article-section">
+                <h2 class="section-title">۳. E-A-T: معیار جدید اعتمادسازی</h2>
+                <p>اخیراً گوگل خیلی روی <span class="key-term">E-A-T</span> تمرکز کرده. این مخفف Expertise (تخصص)، Authoritativeness (اعتبار) و Trustworthiness (قابل اعتماد بودن) هست.</p>
+                
+                <p>من <strong>امیرعلی عابدینی</strong> همیشه به مشتری‌هام تأکید می‌کنم: باید ثابت کنید متخصص هستید! چطور؟</p>
+                
+                <ul>
+                    <li>رزومه تخصصی تیم رو در سایت قرار بدید</li>
+                    <li>مقالات علمی و تخصصی منتشر کنید</li>
+                    <li>نظرات مشتریان واقعی رو نمایش بدید</li>
+                    <li>در شبکه‌های اجتماعی فعال باشید</li>
+                </ul>
+                
+                <p><span class="important-note">تجربه شخصی:</span> یک پروژه پزشکی داشتم که با اضافه کردن بخش "تیم متخصص" و انتشار مقالات علمی، در ۴ ماه ۴ پله رشد کرد!</p>
+            </div>
+
+            <!-- بخش 4 -->
+            <div class="article-section">
+                <h2 class="section-title">۴. سئو محلی (Local SEO): فرصت طلایی کسب‌وکارهای ایرانی</h2>
+                <p>دوستان عزیز، <span class="key-term">سئو محلی</span> بزرگترین فرصت برای کسب‌وکارهای ایرانیه! مخصوصاً بعد از رشد فروش آنلاین.</p>
+                
+                <p>همین الان برید گوگل مپ رو چک کنید. اگه کسب‌وکار شما اونجا نیست، دارید روزانه ده‌ها مشتری رو از دست می‌دید! من <strong>امیرعلی عابدینی</strong> برای یک رستوران محلی کار کردم که با سئو محلی، مشتری‌هاش ۵ برابر شدن.</p>
+                
+                <p><strong>راهکارهای عملی:</strong></p>
+                <ol>
+                    <li>حساب Google Business کامل کنید</li>
+                    <li>نظرات واقعی جمع‌آوری کنید (نه فیک!)</li>
+                    <li>عکس‌های باکیفیت اضافه کنید</li>
+                    <li>سوالات متداول رو پاسخ بدید</li>
+                </ol>
+            </div>
+
+            <!-- بخش 5 -->
+            <div class="article-section">
+                <h2 class="section-title">۵. تولید محتوا در سال ۱۴۰۵: کیفیت بهتر از کمیت</h2>
+                <p>دیگه زمان تولید ۱۰۰ مقاله بی‌کیفیت گذشته! الان <span class="key-term">محتوای جامع</span> و عمیق برنده است.</p>
+                
+                <p>توصیه <strong>امیرعلی عابدینی</strong> به شما: به جای ۱۰ مقاله متوسط، یک مقاله جامع بنویسید که واقعاً مشکل کاربر رو حل کنه. این محتواها به "قطعه برجسته" تبدیل می‌شن و کلیک بیشتری می‌گیرن.</p>
+                
+                <div class="highlight-box">
+                    <h4>فرمول طلایی محتوای ۱۴۰۵:</h4>
+                    <p><strong>مشکل کاربر + راه‌حل عملی + تجربه شخصی + منابع معتبر = محتوای برنده</strong></p>
+                    <p>من در همه پروژه‌هام از این فرمول استفاده می‌کنم و نتیجه عالی گرفته‌ام.</p>
+                </div>
+                
+                <p><span class="warning-note">هشدار:</span> از تولید محتوای تکراری جدا پرهیز کنید. گوگل محتوای کپی رو سریعتر از همیشه شناسایی و جریمه می‌کنه.</p>
+            </div>
+
+            <!-- بخش 6 -->
+            <div class="article-section">
+                <h2 class="section-title">۶. لینک‌سازی (Link Building): هنر زنده است!</h2>
+                <p>بعضی‌ها فکر می‌کنن لینک‌سازی مرده! کاملاً اشتباهه. فقط شکلش عوض شده.</p>
+                
+                <p>دیگه زمان خرید بک‌لینک انبوه گذشته. الان باید <span class="key-term">لینک‌سازی طبیعی</span> و اصولی انجام بدید. من <strong>امیرعلی عابدینی</strong> در پروژه‌ها از این روش‌ها استفاده می‌کنم:</p>
+                
+                <ul>
+                    <li>همکاری با بلاگرهای مرتبط</li>
+                    <li>ایجاد محتوای قابل اشتراک</li>
+                    <li>مشارکت در فروم‌های تخصصی</li>
+                    <li>ساختن اینفوگرافیک‌های کاربردی</li>
+                </ul>
+                
+                <p>یادم می‌آید یک سایت آموزشی با لینک‌سازی اصولی در ۶ ماه از رتبه ۸ به ۲ رسید. رازش؟ صبر و کیفیت!</p>
+            </div>
+
+            <!-- نتیجه‌گیری -->
+            <div class="article-section">
+                <h2 class="section-title">نتیجه‌گیری: آینده سئو دست کیست؟</h2>
+                <p>دوستان گرامی، سئو در سال ۱۴۰۵ بازی متفاوتی شده. برنده‌ها کسانی هستند که:</p>
+                
+                <ol>
+                    <li>به کاربر اولویت می‌دن</li>
+                    <li>محتوای باکیفیت تولید می‌کنن</li>
+                    <li>تجربه کاربری عالی ارائه می‌دن</li>
+                    <li>صبر و استراتژی بلندمدت دارن</li>
+                </ol>
+                
+                <p>من <strong>امیرعلی عابدینی</strong> با سال‌ها تجربه در سئو و دیجیتال مارکتینگ به شما قول می‌دم: اگه اصولی کار کنید، نتیجه می‌گیرید. سئو مثل کشاورزیه، باید بذری بکارید که بعداً برداشت کنید.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>سخن پایانی:</strong> نترسید از تغییرات! به جای فرار از سئو، با آن همراه بشید. من همیشه به مشتری‌هام می‌گم: "سئو هزینه نیست، سرمایه‌گذاریه". اگر سوالی دارید یا نیاز به مشاوره دارید، از طریق شماره‌های سایت با من <strong>امیرعلی عابدینی</strong> در تماس باشید.</p>
+                </div>
+            </div>
+
+            <!-- تگ‌ها -->
+            <div class="article-tags">
+                <a href="#" class="tag">سئو ۱۴۰۵</a>
+                <a href="#" class="tag">بهینه‌سازی سایت</a>
+                <a href="#" class="tag">گوگل</a>
+                <a href="#" class="tag">هوش مصنوعی</a>
+                <a href="#" class="tag">تجربه کاربری</a>
+                <a href="#" class="tag">دیجیتال مارکتینگ</a>
+                <a href="#" class="tag">امیرعلی عابدینی</a>
+            </div>
+
+            <!-- سیستم امتیازدهی ستاره‌ای -->
+            <div class="article-section rating-section">
+                <h2 class="section-title">امتیاز به این مقاله</h2>
+                
+                <div class="rating-container">
+                    <div class="rating-stars">
+                        <div class="stars" id="ratingStars">
+                            <span data-value="1">☆</span>
+                            <span data-value="2">☆</span>
+                            <span data-value="3">☆</span>
+                            <span data-value="4">☆</span>
+                            <span data-value="5">☆</span>
+                        </div>
+                        <div class="rating-text">
+                            <span class="current-rating" id="currentRating">۰ از ۵</span>
+                        </div>
+                    </div>
+                    
+                    <div class="rating-info">
+                        <div class="rating-avg">
+                            <i class="fa fa-star"></i>
+                            <span>میانگین امتیاز: <strong id="averageRating">۴.۳</strong></span>
+                        </div>
+                        <div class="rating-count">
+                            <i class="fa fa-users"></i>
+                            <span>تعداد مشارکت: <strong id="totalRatings">۱۲۴</strong></span>
+                        </div>
+                    </div>
+                    
+                    <button class="submit-rating" id="submitRating" disabled>
+                        ثبت امتیاز
+                    </button>
+                </div>
+            </div>
+
+            <!-- سیستم دیدگاه‌ها -->
+            <div class="article-section comments-section">
+                <h2 class="section-title">دیدگاه‌ها</h2>
+                
+                <div class="comments-form">
+                    <h4>دیدگاه خود را بنویسید</h4>
+                    <form id="commentForm">
+                        <div class="form-group">
+                            <input type="text" id="commentName" placeholder="نام شما" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="commentEmail" placeholder="ایمیل (اختیاری)">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="commentText" rows="4" placeholder="دیدگاه شما..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-comment">
+                            <i class="fa fa-paper-plane"></i>
+                            ارسال دیدگاه
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="comments-list" id="commentsList">
+                    <!-- دیدگاه‌ها اینجا بارگذاری می‌شوند -->
+                </div>
+                
+                <div class="comments-pagination">
+                    <button class="load-more" id="loadMoreComments">
+                        <i class="fa fa-spinner fa-spin" style="display: none;"></i>
+                        نمایش دیدگاه‌های بیشتر
+                    </button>
+                </div>
+            </div>
+
+            <!-- نویگیشن -->
+            <div class="article-navigation">
+                <a href="article-video.html" class="nav-btn">
+                    <i class="fa fa-arrow-right"></i>
+                    <span>مقاله قبلی<br><small>تولید محتوای ویدئویی</small></span>
+                </a>
+                <a href="index.html#blog" class="nav-btn">
+                    <span>بازگشت به بلاگ<br><small>مقالات بیشتر</small></span>
+                    <i class="fa fa-list"></i>
+                </a>
+                <a href="#" class="nav-btn">
+                    <span>مقاله بعدی<br><small>تبلیغات هوشمند</small></span>
+                    <i class="fa fa-arrow-left"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>تمام حقوق این وبسایت برای <strong>امیرعلی عابدینی</strong> محفوظ است. © ۱۴۰۴
+                        <br>طراحی و توسعه: <a href="index.html" title="امیرعلی عابدینی">امیرعلی عابدینی</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- چت‌بات شناور و دکمه حالت تیره -->
+    <div class="chatbot-container">
+        <!-- دکمه حالت تیره بالای چت -->
+        <button class="theme-toggle-btn" id="themeToggleBtn">
+            <i class="fa fa-moon"></i>
+        </button>
+        
+        <!-- دکمه چت -->
+        <button class="chatbot-toggle" id="chatbotToggle">
+            <i class="fa fa-comments"></i>
+            <span class="chatbot-notification">1</span>
+        </button>
+        
+        <!-- پنجره چت -->
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h4>چت با دستیار سئو</h4>
+                <button class="chatbot-close" id="chatbotClose">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chat-message bot-message">
+                    <div class="message-avatar">
+                        <i class="fa fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>سلام! من دستیار سئو هستم. در مورد سئو و دیجیتال مارکتینگ می‌تونم کمکتون کنم. چه سوالی دارید؟</p>
+                        <span class="message-time">هم اکنون</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chatbot-input-area">
+                <textarea 
+                    id="chatbotInput" 
+                    placeholder="پیام خود را بنویسید..."
+                    rows="1"
+                ></textarea>
+                <button id="chatbotSend">
+                    <i class="fa fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- پنل مدیریت -->
+    <div class="admin-panel" id="adminPanel">
+        <div class="admin-panel-content">
+            <div class="admin-panel-header">
+                <h3>پنل مدیریت</h3>
+                <button id="closeAdminPanel" style="background: #f44336; color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">
+                    <i class="fa fa-times"></i> بستن
+                </button>
+            </div>
+            
+            <div class="admin-tabs">
+                <button class="admin-tab active" data-tab="comments">مدیریت دیدگاه‌ها</button>
+                <button class="admin-tab" data-tab="settings">تنظیمات سیستم</button>
+            </div>
+            
+            <div class="admin-tab-content">
+                <!-- مدیریت دیدگاه‌ها -->
+                <div class="admin-section active" id="commentsSection">
+                    <h4>دیدگاه‌های در انتظار تأیید</h4>
+                    <div class="comments-management" id="pendingComments">
+                        <!-- دیدگاه‌های در انتظار اینجا بارگذاری می‌شوند -->
+                    </div>
+                    
+                    <h4 style="margin-top: 30px;">دیدگاه‌های تأیید شده</h4>
+                    <div class="comments-management" id="approvedComments">
+                        <!-- دیدگاه‌های تأیید شده اینجا بارگذاری می‌شوند -->
+                    </div>
+                </div>
+                
+                <!-- تنظیمات سیستم -->
+                <div class="admin-section" id="settingsSection">
+                    <h4>تنظیمات سیستم</h4>
+                    <div class="form-group">
+                        <label>رمز مدیریت:</label>
+                        <input type="password" id="adminPassword" class="form-control" placeholder="رمز جدید">
+                    </div>
+                    <div class="form-group">
+                        <label>تأیید رمز:</label>
+                        <input type="password" id="adminPasswordConfirm" class="form-control" placeholder="تکرار رمز">
+                    </div>
+                    <button id="changePassword" class="btn-approve">تغییر رمز</button>
+                    
+                    <h4 style="margin-top: 30px;">پاک کردن داده‌ها</h4>
+                    <button id="clearAllData" class="btn-reject">پاک کردن تمام داده‌های ذخیره شده</button>
+                    <p style="font-size: 12px; color: #666; margin-top: 10px;">این عمل غیرقابل بازگشت است!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/custom.js"></script>
+    
+    <script>
+        // === RESPONSIVE JAVASCRIPT FOR MOBILE ===
+        
+        // Preloader removal
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(() => {
+                const preloader = document.getElementById('js-preloader');
+                if (preloader) {
+                    preloader.style.opacity = '0';
+                    preloader.style.visibility = 'hidden';
+                    setTimeout(() => {
+                        preloader.style.display = 'none';
+                    }, 300);
+                }
+            }, 500);
+        });
+        
+        // Mobile Menu Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuTrigger = document.getElementById('mobileMenuTrigger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+            const body = document.body;
+            
+            // Open/Close Mobile Menu
+            function toggleMobileMenu() {
+                menuTrigger.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                mobileMenuOverlay.classList.toggle('active');
+                body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+                
+                // Add/remove event listener for escape key
+                if (mobileMenu.classList.contains('active')) {
+                    document.addEventListener('keydown', handleEscapeKey);
+                } else {
+                    document.removeEventListener('keydown', handleEscapeKey);
+                }
+            }
+            
+            function handleEscapeKey(event) {
+                if (event.key === 'Escape') {
+                    closeMobileMenu();
+                }
+            }
+            
+            function closeMobileMenu() {
+                menuTrigger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                mobileMenuOverlay.classList.remove('active');
+                body.style.overflow = '';
+                document.removeEventListener('keydown', handleEscapeKey);
+            }
+            
+            menuTrigger.addEventListener('click', toggleMobileMenu);
+            mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+            
+            // Close menu when clicking on links
+            document.querySelectorAll('.mobile-nav a').forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+            
+            // Touch optimizations for mobile menu
+            let startX = 0;
+            let currentX = 0;
+            
+            mobileMenu.addEventListener('touchstart', function(e) {
+                startX = e.touches[0].clientX;
+            });
+            
+            mobileMenu.addEventListener('touchmove', function(e) {
+                currentX = e.touches[0].clientX;
+                const diff = startX - currentX;
+                
+                // Swipe left to close
+                if (diff > 50) {
+                    mobileMenu.style.transform = `translateX(${-diff}px)`;
+                }
+            });
+            
+            mobileMenu.addEventListener('touchend', function() {
+                const diff = startX - currentX;
+                if (diff > 100) {
+                    closeMobileMenu();
+                }
+                mobileMenu.style.transform = '';
+            });
+            
+            // Improved scrolling experience
+            let lastScrollTop = 0;
+            const header = document.querySelector('.header-area');
+            const preHeader = document.querySelector('.pre-header');
+            
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                // Header hide/show on scroll
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    // Scrolling down
+                    header.style.transform = 'translateY(-100%)';
+                    preHeader.style.transform = 'translateY(-100%)';
+                } else {
+                    // Scrolling up
+                    header.style.transform = 'translateY(0)';
+                    preHeader.style.transform = 'translateY(0)';
+                }
+                
+                // Add shadow when scrolled
+                if (scrollTop > 10) {
+                    header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+                } else {
+                    header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.05)';
+                }
+                
+                lastScrollTop = scrollTop;
+            }, { passive: true });
+            
+            // Touch-friendly interactions
+            document.querySelectorAll('button, .btn, .nav-btn, .tag, .contact-info-item, a').forEach(element => {
+                element.addEventListener('touchstart', function() {
+                    this.style.transform = 'scale(0.98)';
+                    this.style.transition = 'transform 0.1s';
+                });
+                
+                element.addEventListener('touchend', function() {
+                    this.style.transform = 'scale(1)';
+                });
+            });
+            
+            // Prevent zoom on input focus in iOS
+            document.querySelectorAll('input, textarea, select').forEach(input => {
+                let lastTouchEnd = 0;
+                
+                input.addEventListener('touchend', function(event) {
+                    const now = Date.now();
+                    if (now - lastTouchEnd <= 300) {
+                        event.preventDefault();
+                    }
+                    lastTouchEnd = now;
+                }, false);
+                
+                // Scroll input into view when focused
+                input.addEventListener('focus', function() {
+                    setTimeout(() => {
+                        this.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 300);
+                });
+            });
+            
+            // Handle safe areas for iOS
+            function updateSafeAreas() {
+                const vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+                
+                // Update chatbot position
+                const chatbotContainer = document.querySelector('.chatbot-container');
+                if (chatbotContainer) {
+                    const safeBottom = window.innerHeight > window.outerHeight ? 20 : 0;
+                    chatbotContainer.style.bottom = `${Math.max(20, safeBottom)}px`;
+                }
+            }
+            
+            window.addEventListener('resize', updateSafeAreas);
+            window.addEventListener('orientationchange', function() {
+                setTimeout(updateSafeAreas, 100);
+            });
+            updateSafeAreas();
+            
+            // Lazy loading for images
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src || img.src;
+                            img.classList.add('loaded');
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                }, {
+                    rootMargin: '50px 0px',
+                    threshold: 0.01
+                });
+                
+                images.forEach(img => imageObserver.observe(img));
+            } else {
+                // Fallback for older browsers
+                images.forEach(img => {
+                    img.src = img.dataset.src || img.src;
+                    img.classList.add('loaded');
+                });
+            }
+            
+            // Optimize animations for mobile
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelectorAll('*').forEach(el => {
+                    el.style.animationDuration = '0.01ms';
+                    el.style.animationIterationCount = '1';
+                });
+            }
+            
+            // Detect touch device
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            if (isTouchDevice) {
+                document.body.classList.add('touch-device');
+            }
+            
+            // Handle viewport changes for orientation
+            let portrait = window.matchMedia("(orientation: portrait)");
+            portrait.addListener(function(mql) {
+                if(mql.matches) {
+                    // Portrait mode
+                    document.body.classList.add('portrait');
+                    document.body.classList.remove('landscape');
+                } else {
+                    // Landscape mode
+                    document.body.classList.add('landscape');
+                    document.body.classList.remove('portrait');
+                }
+            });
+            
+            // Initialize based on current orientation
+            if (window.innerHeight > window.innerWidth) {
+                document.body.classList.add('portrait');
+            } else {
+                document.body.classList.add('landscape');
+            }
+            
+            // Performance optimization: Debounce resize events
+            let resizeTimeout;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(function() {
+                    updateSafeAreas();
+                    // Recalculate any dynamic layouts
+                }, 250);
+            });
+        });
+        
+        // === DARK THEME MANAGEMENT ===
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggleBtn = document.getElementById('themeToggleBtn');
+            const themeIcon = themeToggleBtn.querySelector('i');
+            
+            // Check saved theme
+            const isDark = localStorage.getItem('darkTheme') === 'true';
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (isDark || (!('darkTheme' in localStorage) && prefersDark)) {
+                document.body.classList.add('dark-theme');
+                themeIcon.className = 'fa fa-sun';
+            }
+            
+            themeToggleBtn.addEventListener('click', function() {
+                document.body.classList.toggle('dark-theme');
+                
+                if (document.body.classList.contains('dark-theme')) {
+                    themeIcon.className = 'fa fa-sun';
+                    localStorage.setItem('darkTheme', 'true');
+                } else {
+                    themeIcon.className = 'fa fa-moon';
+                    localStorage.setItem('darkTheme', 'false');
+                }
+            });
+            
+            // Listen for system theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+                if (!('darkTheme' in localStorage)) {
+                    if (e.matches) {
+                        document.body.classList.add('dark-theme');
+                        themeIcon.className = 'fa fa-sun';
+                    } else {
+                        document.body.classList.remove('dark-theme');
+                        themeIcon.className = 'fa fa-moon';
+                    }
+                }
+            });
+        });
+        
+        // === CHATBOT FUNCTIONALITY ===
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatbotToggle = document.getElementById('chatbotToggle');
+            const chatbotWindow = document.getElementById('chatbotWindow');
+            const chatbotClose = document.getElementById('chatbotClose');
+            const chatbotSend = document.getElementById('chatbotSend');
+            const chatbotInput = document.getElementById('chatbotInput');
+            const chatbotMessages = document.getElementById('chatbotMessages');
+            
+            // Chatbot responses
+            const seoResponses = {
+                greetings: [
+                    "سلام! من دستیار هوشمند سئو هستم. در مورد سئو و دیجیتال مارکتینگ می‌تونم کمکتون کنم.",
+                    "درود! برای مشاوره در زمینه سئو و بهینه‌سازی سایت در خدمت شما هستم.",
+                    "سلام عزیز! امیرعلی عابدینی اینجاست. چه سوالی در مورد سئو دارید؟"
+                ],
+                seoQuestions: [
+                    "سئو در سال ۱۴۰۵ بیشتر بر تجربه کاربری و محتوای باکیفیت تمرکز داره. سرعت سایت و محتوای منحصر به فرد خیلی مهم شدن.",
+                    "برای بهبود سئو، اول از همه سرعت سایتتون رو بررسی کنید. بعد محتوای ارزشمند تولید کنید و لینک‌سازی طبیعی انجام بدید.",
+                    "سئو محلی الان خیلی مهم شده. حتما Google Business رو کامل کنید و نظرات واقعی جمع‌آوری کنید."
+                ],
+                technical: [
+                    "برای بررسی سئو سایتتون می‌تونید از ابزارهایی مثل Google Search Console و Ahrefs استفاده کنید.",
+                    "مشکلات فنی سئو شامل سرعت پایین، ساختار نامناسب URL و عدم رعایت اصول mobile-friendly هست.",
+                    "حتما سایتتون رو برای موبایل بهینه کنید. بیش از ۶۰٪ جستجوها از موبایل انجام می‌شن."
+                ],
+                general: [
+                    "امیرعلی عابدینی متخصص سئو با سال‌ها تجربه در زمینه بهینه‌سازی سایت‌های ایرانی هست.",
+                    "برای مشاوره تخصصی سئو می‌تونید با شماره ۰۹۳۰۵۶۷۱۰۹ تماس بگیرید.",
+                    "پیشنهاد می‌کنم مقاله‌های بخش بلاگ رو مطالعه کنید. اطلاعات مفیدی در مورد سئو دارن."
+                ]
+            };
+            
+            // Open chatbot
+            chatbotToggle.addEventListener('click', function() {
+                chatbotWindow.classList.add('active');
+                setTimeout(() => {
+                    chatbotInput.focus();
+                }, 300);
+            });
+            
+            // Close chatbot
+            chatbotClose.addEventListener('click', function() {
+                chatbotWindow.classList.remove('active');
+            });
+            
+            // Close with escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && chatbotWindow.classList.contains('active')) {
+                    chatbotWindow.classList.remove('active');
+                }
+            });
+            
+            // Send message
+            function sendMessage() {
+                const message = chatbotInput.value.trim();
+                if (!message) return;
+                
+                // Add user message
+                addMessage(message, 'user');
+                chatbotInput.value = '';
+                adjustTextareaHeight();
+                
+                // Generate bot response
+                setTimeout(() => {
+                    let response;
+                    const lowerMessage = message.toLowerCase();
+                    
+                    if (lowerMessage.includes('سلام') || lowerMessage.includes('درود')) {
+                        response = seoResponses.greetings[Math.floor(Math.random() * seoResponses.greetings.length)];
+                    } else if (lowerMessage.includes('سئو') || lowerMessage.includes('seo') || lowerMessage.includes('بهینه')) {
+                        response = seoResponses.seoQuestions[Math.floor(Math.random() * seoResponses.seoQuestions.length)];
+                    } else if (lowerMessage.includes('چطور') || lowerMessage.includes('چگونه') || lowerMessage.includes('راهنمایی')) {
+                        response = seoResponses.technical[Math.floor(Math.random() * seoResponses.technical.length)];
+                    } else if (lowerMessage.includes('امیرعلی') || lowerMessage.includes('عابدینی')) {
+                        response = seoResponses.general[1];
+                    } else {
+                        response = seoResponses.general[Math.floor(Math.random() * seoResponses.general.length)];
+                    }
+                    
+                    addMessage(response, 'bot');
+                }, 800);
+            }
+            
+            // Add message to chat
+            function addMessage(text, sender) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `chat-message ${sender}-message`;
+                
+                const now = new Date();
+                const timeString = now.toLocaleTimeString('fa-IR', { 
+                    hour: '2-digit', 
+                    minute: '2-digit' 
+                });
+                
+                messageDiv.innerHTML = `
+                    <div class="message-avatar">
+                        <i class="fa fa-${sender === 'bot' ? 'robot' : 'user'}"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>${text}</p>
+                        <span class="message-time">${timeString}</span>
+                    </div>
+                `;
+                
+                chatbotMessages.appendChild(messageDiv);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+            
+            // Adjust textarea height
+            function adjustTextareaHeight() {
+                chatbotInput.style.height = 'auto';
+                chatbotInput.style.height = Math.min(chatbotInput.scrollHeight, 120) + 'px';
+            }
+            
+            // Event listeners
+            chatbotSend.addEventListener('click', sendMessage);
+            chatbotInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                    e.preventDefault();
+                    sendMessage();
+                }
+            });
+            chatbotInput.addEventListener('input', adjustTextareaHeight);
+            
+            // Initial height adjustment
+            adjustTextareaHeight();
+        });
+        
+        // === RATING SYSTEM ===
+        document.addEventListener('DOMContentLoaded', function() {
+            const stars = document.querySelectorAll('#ratingStars span');
+            const currentRating = document.getElementById('currentRating');
+            const submitRating = document.getElementById('submitRating');
+            const averageRating = document.getElementById('averageRating');
+            const totalRatings = document.getElementById('totalRatings');
+            
+            let selectedRating = 0;
+            
+            // Load ratings
+            function loadRatings() {
+                const articleId = 'seo-1405-article';
+                const ratings = JSON.parse(localStorage.getItem('articleRatings') || '{}');
+                
+                if (ratings[articleId]) {
+                    const articleRatings = ratings[articleId];
+                    const total = articleRatings.length;
+                    const sum = articleRatings.reduce((a, b) => a + b, 0);
+                    const avg = total > 0 ? (sum / total).toFixed(1) : '۰';
+                    
+                    averageRating.textContent = avg;
+                    totalRatings.textContent = total;
+                }
+            }
+            
+            // Star interactions
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    const value = parseInt(this.getAttribute('data-value'));
+                    selectedRating = value;
+                    
+                    stars.forEach((s, index) => {
+                        if (index < value) {
+                            s.textContent = '★';
+                            s.classList.add('active');
+                        } else {
+                            s.textContent = '☆';
+                            s.classList.remove('active');
+                        }
+                    });
+                    
+                    currentRating.textContent = `${value} از ۵`;
+                    submitRating.disabled = false;
+                });
+            });
+            
+            // Submit rating
+            submitRating.addEventListener('click', function() {
+                if (selectedRating === 0) return;
+                
+                const articleId = 'seo-1405-article';
+                const ratings = JSON.parse(localStorage.getItem('articleRatings') || '{}');
+                
+                if (!ratings[articleId]) {
+                    ratings[articleId] = [];
+                }
+                
+                const userRated = localStorage.getItem(`rated_${articleId}`);
+                if (userRated) {
+                    alert('شما قبلاً به این مقاله امتیاز داده‌اید!');
+                    return;
+                }
+                
+                ratings[articleId].push(selectedRating);
+                localStorage.setItem('articleRatings', JSON.stringify(ratings));
+                localStorage.setItem(`rated_${articleId}`, 'true');
+                
+                loadRatings();
+                submitRating.disabled = true;
+                submitRating.textContent = 'امتیاز شما ثبت شد ✓';
+                submitRating.style.background = '#4CAF50';
+                
+                setTimeout(() => {
+                    submitRating.textContent = 'ثبت امتیاز';
+                    submitRating.style.background = '';
+                }, 2000);
+            });
+            
+            // Check if user already rated
+            const articleId = 'seo-1405-article';
+            const userRated = localStorage.getItem(`rated_${articleId}`);
+            if (userRated) {
+                submitRating.disabled = true;
+                submitRating.textContent = 'شما قبلاً امتیاز داده‌اید';
+            }
+            
+            loadRatings();
+        });
+        
+        // === COMMENTS SYSTEM ===
+        document.addEventListener('DOMContentLoaded', function() {
+            const commentForm = document.getElementById('commentForm');
+            const commentsList = document.getElementById('commentsList');
+            const loadMoreBtn = document.getElementById('loadMoreComments');
+            
+            // Load comments
+            function loadComments() {
+                const comments = JSON.parse(localStorage.getItem('articleComments') || '[]');
+                const approvedComments = comments.filter(c => c.status === 'approved');
+                
+                commentsList.innerHTML = '';
+                
+                if (approvedComments.length === 0) {
+                    commentsList.innerHTML = '<p style="text-align: center; color: #666; padding: 30px;">هنوز دیدگاهی ثبت نشده است. شما اولین نفر باشید!</p>';
+                    return;
+                }
+                
+                approvedComments.forEach(comment => {
+                    const commentDiv = createCommentElement(comment);
+                    commentsList.appendChild(commentDiv);
+                });
+            }
+            
+            // Create comment element
+            function createCommentElement(comment) {
+                const commentDiv = document.createElement('div');
+                commentDiv.className = 'comment-item';
+                
+                const date = new Date(comment.date).toLocaleDateString('fa-IR', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+                
+                let replyHtml = '';
+                if (comment.adminReply) {
+                    const replyDate = comment.replyDate ? new Date(comment.replyDate).toLocaleDateString('fa-IR') : 'امروز';
+                    replyHtml = `
+                        <div class="comment-reply admin-reply">
+                            <div class="reply-header">
+                                <strong><i class="fa fa-check-circle"></i> پاسخ مدیر</strong>
+                                <span class="reply-date">${replyDate}</span>
+                            </div>
+                            <div class="reply-body">
+                                <p>${comment.adminReply}</p>
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                commentDiv.innerHTML = `
+                    <div class="comment-header">
+                        <div class="comment-author">
+                            <div class="author-avatar">
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <strong>${comment.name}</strong>
+                                <span class="comment-date">${date}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-body">
+                        <p>${comment.text}</p>
+                    </div>
+                    ${replyHtml}
+                `;
+                
+                return commentDiv;
+            }
+            
+            // Submit comment
+            commentForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById('commentName').value.trim();
+                const email = document.getElementById('commentEmail').value.trim();
+                const text = document.getElementById('commentText').value.trim();
+                
+                if (!name || !text) {
+                    alert('لطفاً نام و دیدگاه خود را وارد کنید.');
+                    return;
+                }
+                
+                const comment = {
+                    id: Date.now(),
+                    name,
+                    email: email || 'بدون ایمیل',
+                    text,
+                    date: new Date().toISOString(),
+                    status: 'pending',
+                    adminReply: null,
+                    replyDate: null
+                };
+                
+                const comments = JSON.parse(localStorage.getItem('articleComments') || '[]');
+                comments.unshift(comment);
+                localStorage.setItem('articleComments', JSON.stringify(comments));
+                
+                commentForm.reset();
+                alert('دیدگاه شما با موفقیت ثبت شد و پس از تأیید مدیر نمایش داده می‌شود.');
+                loadComments();
+            });
+            
+            // Load more comments
+            loadMoreBtn.addEventListener('click', function() {
+                const spinner = loadMoreBtn.querySelector('.fa-spinner');
+                spinner.style.display = 'inline-block';
+                loadMoreBtn.disabled = true;
+                
+                setTimeout(() => {
+                    spinner.style.display = 'none';
+                    loadMoreBtn.innerHTML = '<i class="fa fa-check"></i> همه دیدگاه‌ها بارگذاری شد';
+                    loadMoreBtn.disabled = true;
+                }, 1000);
+            });
+            
+            loadComments();
+        });
+        
+        // === ADMIN PANEL ===
+        document.addEventListener('DOMContentLoaded', function() {
+            const adminLoginBtn = document.getElementById('adminLoginBtn');
+            const adminPanel = document.getElementById('adminPanel');
+            const closeAdminPanel = document.getElementById('closeAdminPanel');
+            const adminTabs = document.querySelectorAll('.admin-tab');
+            const adminSections = document.querySelectorAll('.admin-section');
+            
+            // Check admin password
+            function checkAdminPassword() {
+                const savedPassword = localStorage.getItem('adminPassword') || 'admin123';
+                const inputPassword = prompt('رمز مدیریت را وارد کنید:');
+                
+                if (inputPassword === savedPassword) {
+                    return true;
+                } else {
+                    alert('رمز اشتباه است!');
+                    return false;
+                }
+            }
+            
+            // Open admin panel
+            adminLoginBtn.addEventListener('click', function() {
+                if (checkAdminPassword()) {
+                    adminPanel.classList.add('active');
+                    loadAdminPanel();
+                }
+            });
+            
+            // Close admin panel
+            closeAdminPanel.addEventListener('click', function() {
+                adminPanel.classList.remove('active');
+            });
+            
+            // Close with escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && adminPanel.classList.contains('active')) {
+                    adminPanel.classList.remove('active');
+                }
+            });
+            
+            // Tab switching
+            adminTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    adminTabs.forEach(t => t.classList.remove('active'));
+                    adminSections.forEach(s => s.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    document.getElementById(`${tabId}Section`).classList.add('active');
+                });
+            });
+            
+            // Load admin panel data
+            function loadAdminPanel() {
+                loadPendingComments();
+                loadApprovedComments();
+            }
+            
+            // Load pending comments
+            function loadPendingComments() {
+                const pendingCommentsDiv = document.getElementById('pendingComments');
+                const comments = JSON.parse(localStorage.getItem('articleComments') || '[]');
+                const pendingComments = comments.filter(c => c.status === 'pending');
+                
+                pendingCommentsDiv.innerHTML = '';
+                
+                if (pendingComments.length === 0) {
+                    pendingCommentsDiv.innerHTML = '<p style="text-align: center; color: #666; padding: 20px;">هیچ دیدگاهی در انتظار تأیید نیست.</p>';
+                    return;
+                }
+                
+                pendingComments.forEach(comment => {
+                    const commentDiv = createManageCommentElement(comment);
+                    pendingCommentsDiv.appendChild(commentDiv);
+                });
+            }
+            
+            // Load approved comments
+            function loadApprovedComments() {
+                const approvedCommentsDiv = document.getElementById('approvedComments');
+                const comments = JSON.parse(localStorage.getItem('articleComments') || '[]');
+                const approvedComments = comments.filter(c => c.status === 'approved');
+                
+                approvedCommentsDiv.innerHTML = '';
+                
+                if (approvedComments.length === 0) {
+                    approvedCommentsDiv.innerHTML = '<p style="text-align: center; color: #666; padding: 20px;">هیچ دیدگاه تأیید شده‌ای وجود ندارد.</p>';
+                    return;
+                }
+                
+                approvedComments.forEach(comment => {
+                    const commentDiv = createManageCommentElement(comment, true);
+                    approvedCommentsDiv.appendChild(commentDiv);
+                });
+            }
+            
+            // Create manage comment element
+            function createManageCommentElement(comment, isApproved = false) {
+                const commentDiv = document.createElement('div');
+                commentDiv.className = 'comment-manage-item';
+                commentDiv.id = `comment-${comment.id}`;
+                
+                const date = new Date(comment.date).toLocaleDateString('fa-IR', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+                
+                let actionsHtml = '';
+                if (!isApproved) {
+                    actionsHtml = `
+                        <button class="btn-approve" onclick="window.approveComment(${comment.id})">تأیید</button>
+                        <button class="btn-reject" onclick="window.rejectComment(${comment.id})">رد</button>
+                        <button class="btn-reply" onclick="window.showReplyForm(${comment.id})">پاسخ</button>
+                    `;
+                } else {
+                    actionsHtml = `
+                        <button class="btn-reject" onclick="window.deleteComment(${comment.id})">حذف</button>
+                        ${!comment.adminReply ? `<button class="btn-reply" onclick="window.showReplyForm(${comment.id})">پاسخ</button>` : ''}
+                    `;
+                }
+                
+                let replyInfo = '';
+                if (comment.adminReply) {
+                    const replyDate = comment.replyDate ? new Date(comment.replyDate).toLocaleDateString('fa-IR') : 'امروز';
+                    replyInfo = `
+                        <div style="background: #e8f5e9; padding: 10px; border-radius: 5px; margin-top: 10px;">
+                            <strong>پاسخ مدیر:</strong>
+                            <p>${comment.adminReply}</p>
+                            <small>${replyDate}</small>
+                        </div>
+                    `;
+                }
+                
+                commentDiv.innerHTML = `
+                    <div class="comment-manage-header">
+                        <div>
+                            <strong>${comment.name}</strong> (${comment.email})
+                            <br><small>${date}</small>
+                        </div>
+                        <div class="comment-actions-admin">
+                            ${actionsHtml}
+                        </div>
+                    </div>
+                    <p>${comment.text}</p>
+                    ${replyInfo}
+                    <div class="reply-form" id="reply-form-${comment.id}" style="display: none;">
+                        <textarea id="reply-text-${comment.id}" rows="3" placeholder="پاسخ خود را بنویسید..."></textarea>
+                        <button class="btn-approve" onclick="window.submitReply(${comment.id})">ارسال پاسخ</button>
+                    </div>
+                `;
+                
+                return commentDiv;
+            }
+            
+            // Change password
+            document.getElementById('changePassword').addEventListener('click', function() {
+                const newPassword = document.getElementById('adminPassword').value;
+                const confirmPassword = document.getElementById('adminPasswordConfirm').value;
+                
+                if (!newPassword) {
+                    alert('لطفاً رمز جدید را وارد کنید.');
+                    return;
+                }
+                
+                if (newPassword !== confirmPassword) {
+                    alert('رمزها مطابقت ندارند!');
+                    return;
+                }
+                
+                localStorage.setItem('adminPassword', newPassword);
+                alert('رمز با موفقیت تغییر کرد!');
+                
+                document.getElementById('adminPassword').value = '';
+                document.getElementById('adminPasswordConfirm').value = '';
+            });
+            
+            // Clear all data
+            document.getElementById('clearAllData').addEventListener('click', function() {
+                if (confirm('آیا مطمئن هستید؟ تمامی دیدگاه‌ها، امتیازها و تنظیمات پاک خواهند شد.')) {
+                    localStorage.clear();
+                    alert('تمامی داده‌ها پاک شدند!');
+                    location.reload();
+                }
+            });
+            
+            // Global functions for admin actions
+            window.approveComment = function(commentId) {
+                const comments = JSON.parse(localStorage.getItem('articleComments') || '[]');
+                const commentIndex = comments.findIndex(c => c.id === commentId);
+                
+                if (commentIndex !== -1) {
+                    comments[commentIndex].status = 'approved';
+                    localStorage.setItem('articleComments', JSON.stringify(comments));
+                    
+                    loadPendingComments();
+                    loadApprovedComments();
+                    
+                    const commentForm = document.getElementById('commentForm');
+                    const commentsList = document.getElementById('commentsList');
+                    const approvedComments = comments.filter(c => c.status === 'approved');
+                    
+                    if (approvedComments.length === 0) {
+                        commentsList.innerHTML = '<p style="text-align: center; color: #666; padding: 30px;">هنوز دیدگاهی ثبت نشده است. شما اولین نفر باشید!</p>';
+                    }
+                    
+                    alert('دیدگاه تأیید شد!');
+                }
+            };
+            
+            window.rejectComment = function(commentId) {
+                if (confirm('آیا مطمئن هستید که می‌خواهید این دیدگاه را رد کنید؟')) {
+                    const comments = JSON.parse(localStorage.getItem('articleComments') || '[]');
+                    const filteredComments = comments.filter(c => c.id !== commentId);
+                    localStorage.setItem('articleComments', JSON.stringify(filteredComments));
+                    
+                    loadPendingComments();
+                    loadApprovedComments();
+                    
+                    alert('دیدگاه رد شد!');
+                }
+            };
+            
+            window.deleteComment = function(commentId) {
+                if (confirm('آیا مطمئن هستید که می‌خواهید این دیدگاه را حذف کنید؟')) {
+                    const comments = JSON.parse(localStorage.getItem('articleComments') || '[]');
+                    const filteredComments = comments.filter(c => c.id !== commentId);
+                    localStorage.setItem('articleComments', JSON.stringify(filteredComments));
+                    
+                    loadPendingComments();
+                    loadApprovedComments();
+                    
+                    const commentsList = document.getElementById('commentsList');
+                    const approvedComments = filteredComments.filter(c => c.status === 'approved');
+                    
+                    if (approvedComments.length === 0) {
+                        commentsList.innerHTML = '<p style="text-align: center; color: #666; padding: 30px;">هنوز دیدگاهی ثبت نشده است. شما اولین نفر باشید!</p>';
+                    }
+                    
+                    alert('دیدگاه حذف شد!');
+                }
+            };
+            
+            window.showReplyForm = function(commentId) {
+                const replyForm = document.getElementById(`reply-form-${commentId}`);
+                if (replyForm) {
+                    replyForm.style.display = replyForm.style.display === 'block' ? 'none' : 'block';
+                }
+            };
+            
+            window.submitReply = function(commentId) {
+                const replyTextArea = document.getElementById(`reply-text-${commentId}`);
+                const replyText = replyTextArea.value.trim();
+                
+                if (!replyText) {
+                    alert('لطفاً متن پاسخ را وارد کنید.');
+                    return;
+                }
+                
+                const comments = JSON.parse(localStorage.getItem('articleComments') || '[]');
+                const commentIndex = comments.findIndex(c => c.id === commentId);
+                
+                if (commentIndex !== -1) {
+                    comments[commentIndex].adminReply = replyText;
+                    comments[commentIndex].replyDate = new Date().toISOString();
+                    localStorage.setItem('articleComments', JSON.stringify(comments));
+                    
+                    loadPendingComments();
+                    loadApprovedComments();
+                    
+                    const commentsList = document.getElementById('commentsList');
+                    const approvedComments = comments.filter(c => c.status === 'approved');
+                    
+                    commentsList.innerHTML = '';
+                    approvedComments.forEach(comment => {
+                        const commentDiv = createCommentElement(comment);
+                        commentsList.appendChild(commentDiv);
+                    });
+                    
+                    alert('پاسخ ارسال شد!');
+                    replyTextArea.value = '';
+                    
+                    const replyForm = document.getElementById(`reply-form-${commentId}`);
+                    if (replyForm) {
+                        replyForm.style.display = 'none';
+                    }
+                }
+            };
+        });
+        
+        // === PERFORMANCE OPTIMIZATIONS ===
+        document.addEventListener('DOMContentLoaded', function() {
+            // Defer non-critical CSS
+            const criticalCSS = document.createElement('style');
+            criticalCSS.textContent = `
+                .pre-header, .header-area, .article-hero, .article-container {
+                    opacity: 0;
+                    animation: fadeIn 0.5s ease forwards;
+                }
+                @keyframes fadeIn {
+                    to { opacity: 1; }
+                }
+            `;
+            document.head.appendChild(criticalCSS);
+            
+            // Load non-critical CSS async
+            const nonCriticalCSS = [
+                'assets/css/animated.css',
+                'assets/css/owl.css'
+            ];
+            
+            nonCriticalCSS.forEach(href => {
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = href;
+                link.media = 'print';
+                link.onload = () => link.media = 'all';
+                document.head.appendChild(link);
+            });
+            
+            // Service worker registration (if available)
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/sw.js').catch(error => {
+                        console.log('ServiceWorker registration failed:', error);
+                    });
+                });
+            }
+            
+            // Cache important assets
+            const importantAssets = [
+                'titel-logo.png',
+                'seo-logo.png',
+                'assets/images/logo-v3.png'
+            ];
+            
+            if ('caches' in window) {
+                caches.open('important-assets').then(cache => {
+                    importantAssets.forEach(asset => {
+                        cache.add(asset).catch(() => {});
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
